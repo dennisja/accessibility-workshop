@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "version": "1.0.0",
+  "description": "Deck created with mdx-deck",
+  "scripts": {
+    "start": "mdx-deck index.js",
+    "build": "mdx-deck build index.js",
+    "pdf": "mdx-deck pdf index.js",
+    "image": "mdx-deck screenshot index.js",
+    "help": "mdx-deck",
+    "deploy":"node deploy.js"
+  },
+  "keywords": [],
+  "author": "Dennis Jjagwe",
+  "license": "MIT",
+  "devDependencies": {
+    "file-loader": "^2.0.0",
+    "gh-pages": "^2.0.1",
+    "mdx-deck": "^1.6.7",
+    "shelljs": "^0.8.2"
+  },
+  "name": "presentation"
+}

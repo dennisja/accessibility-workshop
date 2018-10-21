@@ -1,0 +1,12 @@
+{
+  "name": "accessibility",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/dennisja/accessibility-workshop.git",
+  "author": "dennisja <dennisjjagwe@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "present":"cd presentation && yarn start",
+    "deploy-slides": "cd presentation && yarn deploy"
+  }
+}
