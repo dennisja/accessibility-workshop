@@ -13,6 +13,7 @@
   "author": "Brent Jackson",
   "license": "MIT",
   "devDependencies": {
+    "file-loader": "^2.0.0",
     "mdx-deck": "^1.6.7"
   },
   "name": "presentation"
