@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Deck created with mdx-deck",
   "scripts": {
-    "start": "mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx",
-    "pdf": "mdx-deck pdf deck.mdx",
-    "image": "mdx-deck screenshot deck.mdx",
+    "start": "mdx-deck index.js",
+    "build": "mdx-deck build index.js",
+    "pdf": "mdx-deck pdf index.js",
+    "image": "mdx-deck screenshot index.js",
     "help": "mdx-deck"
   },
   "keywords": [],
