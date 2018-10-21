@@ -7,14 +7,17 @@
     "build": "mdx-deck build index.js",
     "pdf": "mdx-deck pdf index.js",
     "image": "mdx-deck screenshot index.js",
-    "help": "mdx-deck"
+    "help": "mdx-deck",
+    "deploy":"node deploy.js"
   },
   "keywords": [],
-  "author": "Brent Jackson",
+  "author": "Dennis Jjagwe",
   "license": "MIT",
   "devDependencies": {
     "file-loader": "^2.0.0",
-    "mdx-deck": "^1.6.7"
+    "gh-pages": "^2.0.1",
+    "mdx-deck": "^1.6.7",
+    "shelljs": "^0.8.2"
   },
   "name": "presentation"
 }

@@ -6,6 +6,7 @@
   "author": "dennisja <dennisjjagwe@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "present":"cd presentation && yarn start"
+    "present":"cd presentation && yarn start",
+    "deploy-slides": "cd presentation && yarn deploy"
   }
 }
