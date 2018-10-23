@@ -1,2 +1,74 @@
-Bulding sites that work well with the keyboard
-Ensures that your UI is in a good shape for semantics
+# Focus
+
+Control on the computer screen that receives input from the keyboard or from the
+ clipboard when you paste
+
+ e.g. Clicking an input inorder to type in it
+
+Its critical for people using assitive technologies and the keyboard
+
+---
+Determines where keyboard events go in a page and its shown by the focus ring.
+
+```notes
+Navigating through elements using Tab & Shift+Tab and arrow keys to move focus within an element
+```
+---
+
+# Tab Order
+
+Order in which your elements are navigated using tab
+
+Implicitly focussable elements - are automatically inserted in the tab order e.g
+buttons, inputs, selects e.t.c
+
+Not all elements are focussable e.g. divs, images, paragraphs
+
+Note: Only make elements focussable if a user is to interact with them
+
+---
+# Tab Order Example
+
+<button>One </button>
+<button>Two</button>
+<button>Three</button>
+
+---
+# Changing Tab Order
+
+Tab Order = Dom Order.
+
+Change and add elements to it using tabindex
+```notes
+tabindex=0 and elements to taborder
+tabindex=-1 remove elements from taborder
+```
+Don't Use Css to Change tab order e.g
+<button>One </button>
+<button>Two</button>
+<button style={{float:'left'}}>Three</button>
+
+---
+# Managing focus
+- Applications
+    - Focusing particular sections of a page linked by ids
+    - Skip Links
+    - Component Based Focus Management e.g Native Select
+- Manipulating a page in response to a user action
+
+```notes
+involves giving an item a tabindex of -1 and calling its focus() method when its focussed
+```
+---
+# Building Custom Components
+
+Live Coding 
+(😎)
+- Roving Focus (Radio Group as Case Study)
+- Keyboard Trap (Modal as Case Study)
+- Off Screen Content (Just Talk About This - SideBar as case Study)
+```notes
+Hint: Use document.activeElement for debugging
+```
+
+[Aria Design Patterns](https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex)
