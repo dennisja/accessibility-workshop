@@ -8,7 +8,7 @@ if (build.code === 0) {
   shell.echo('Finished Building');
   shell.echo('Publishing to gh-pages.....');
   ghp.publish('dist', () => {
-    console.log('Finished Building....');
+    console.log('Finished Publishing....');
   });
 } else {
   shell.echo(`Building Failed with code${build.code}`);
