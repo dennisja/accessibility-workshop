@@ -4,7 +4,7 @@ import okaidia from 'react-syntax-highlighter/styles/prism/okaidia';
 export default {
   ...theme,
   colors: {
-    text: 'rgb(106, 215, 152)',
+    text: '#FF6D00',
     background: 'rgb(1, 22, 39)',
     link: '#40C4FF',
   },
