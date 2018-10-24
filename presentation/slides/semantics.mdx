@@ -1,1 +1,147 @@
-Expressinv our UI in a robust way to work with a variety of assistive technologiesF
+# Semantics
+Expressing our UI in a robust way to work with a variety of assistive technologies
+
+---
+# [Assistive Technologies](https://webaim.org/articles/motor/assistive)
+
+Software, Devices and Tools that enable anyone complete a task
+
+Examples
+ - Braile display
+ - Voice Controls
+ - Screen Readers
+ - Browser extensions e.t.c
+
+---
+
+Note:
+
+Most assistive technologies for people with motor disabilities either work through
+the keyboard or emulate the functionality of the keyboard.
+
+---
+# Affordances
+Things that give to insight to a user how our pages work e.g buttons, scroll bars,
+input, text areas e.t.c. Forexample When you see a date picker you know its time to
+enter a date.
+
+```notes
+Well designed affordances enable peopl do sth, with little training
+They might not be obvious to first timers
+```
+
+---
+Some one who can't see the screen can't see affordances, hence a need to tell users 
+of assistive technologies like screen readers about content.
+
+Can be achieved using `name/labels`, `role` and `value` and `state` to facilitate accessibilty
+```notes
+Role - Element type
+Name - Element Name
+Value - Element Value
+State - Element State i.e checked, expanded e.t.c
+```
+
+([WCAG 4.1.2](https://www.w3.org/TR/WCAG21/#name-role-value))
+---
+# Accessibility Tree
+
+Built from the DOM tree for assistive technologies.
+
+Its Built from the DOM tree basing on the role, [name/label/alternative text](https://www.w3.org/TR/WCAG21/#text-alternatives), value & state of elements.
+
+Its automatically generated for native elements
+
+```notes
+Talk about alt for images and label for form elements & demonstrate purpose of this
+using a screen reader
+Decorative(Supplementary) images should have empty alt attributes 
+```
+
+---
+Note:
+If we use non native elements in place of native elements e.g. a div in plcae of a button, 
+we have to provide a way for assistive technologies to know what that the div is a button
+and implement the required keyboard events.
+
+---
+# Navigation
+
+Navigating Content Using Assistive Technologies 
+
+(Screen Readers as case study using [Voice Over](https://webaim.org/articles/voiceover/))
+
+- Headings
+
+```notes
+- Sections should have headings
+- Dont use heading levels to get smaller headings
+```
+
+---
+- Form Controls
+- [Links](https://www.w3.org/TR/WCAG21/#link-purpose-link-only)
+```notes
+- Don't use spans or other elements for Links
+- Don't define links with no hrefs
+- Don't use links in place of buttons
+- Images in links should have alt text
+- Use meaningful text in links. Instead of "learn more" use "learn more about js"
+```
+- Web Spots
+- Land Marks ->
+    main, header, footer, nav, article, aside, section
+
+---
+# Key Take Away
+- Use Meaningful headings, Link text and Make a good page structure
+
+---
+# ARIA
+
+Enables expressing semantics to screen readers which HTML can express on its own
+
+Using HTML native elements can help us address issues related to
+- DOM Order, Focus, Keyboard, Semantics, Labeling, Headings, Landmarks, Links
+
+---
+There are some common UI patterns that are not natively defined in HTML
+
+[WAI-ARIA (Web Accessibility Initiative Accessible Rich Internet Applications)](https://www.w3.org/TR/wai-aria-1.1/)
+has guidelines to solve accessibilty issues not addressed by HTML natively
+
+---
+ARIA (WAI ARIA)  
+
+allows you specify attributes on elements whoch modify the way an element
+is translated in the accessibilty tree
+
+- It doesnot 
+    - Modify element appearance
+    - Modify Element behaviour
+    - Add focusability
+    - Add keyboard event handling
+
+---
+What ARIA can do for you
+ - Add semantics to HTML elements where no native elements exist
+ - Modify existing elements e.g using a button to implement a switch
+ - Express more UI patterns that don't exist
+ - Express semantic relationship between elements that go beyong parent, child, & sibling
+ - Make certain page parts live e.g notifications
+---
+- ARIA [roles](https://www.w3.org/TR/wai-aria-1.1/#roles)
+- ARIA labels using aria-label, aria-labelledby or aria-described-by
+- ARIA relationships e.g aria-labelledby to specify an element(s) that will act
+as a label to some element, aria-owns e.t.c
+- ARIA live (aria-live) - inform assistive technologies about live content
+
+---
+Hiding elements from the accessibilty tree
+- aria-hidden
+- inert attribute
+- hidden attribute e.t.c
+
+---
+
+Improve Modal and Radio Button Example To be interpreted by a Screen Reader
